@@ -119,6 +119,6 @@ add_filter( 'woocommerce_cart_needs_payment', '__return_false' );
 
 //hide shipping methods
 //add_filter('woocommerce_package_rates', 'hide_shipping_methods', 10, 2); 
-function hide_shipping_methods(){
-    unset($available_shipping_methods[$shipping_method]);
-}
+// function hide_shipping_methods(){
+//     unset($available_shipping_methods[$shipping_method]);
+// }

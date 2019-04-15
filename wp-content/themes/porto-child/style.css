@@ -86,3 +86,4 @@ body.woocommerce-page.archive .sidebar-content .widget .widget-title {color:#2f8
     box-shadow: 0 0 0 0.2rem rgba(41, 54, 60, .5);
 }
 
+.cart_totals  .shipping{display: none}
