@@ -1,0 +1,41 @@
+
+div.quantity {
+    display: inline-block;
+    position: relative;
+    min-width: 4.1429em;
+    margin-#{$right}: .8571em;
+    &.hidden { display: none !important; }
+    .qty {
+        -moz-appearance: textfield;
+        text-align: center;
+        width: 2.5em;
+        height: 2.7143em;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .minus,
+    .plus {
+        font-family: arial;
+        position: absolute;
+        #{$left}: 2.8571em;
+        width: 1.1428em;
+        height: 1.1428em;
+        line-height:  1;
+        border: 1px solid;
+        padding: 0;
+        outline: none;
+    }
+    .plus {
+        top: 0;
+
+    }
+    .minus {
+        bottom: 0;
+    }
+}
+
+.quantity {
+    .qty {
+        color: #777;
+    }
+}

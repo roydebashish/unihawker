@@ -1,0 +1,42 @@
+html {
+    direction: $dir;
+    overflow-x: hidden;
+    box-shadow: none !important;
+}
+
+body {
+    margin: 0;
+}
+
+.clear {
+    float: none;
+    clear: both;
+}
+
+.f-left {
+    float: $left;
+}
+.f-right {
+    float: $right;
+}
+.f-none {
+    float: none;
+}
+.hide {
+    display: none !important;
+}
+
+.row:before, .row:after {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 575px) {
+    body {
+        font-size: 13px;
+    }
+}
+
+a.nolink {
+    pointer-events: none;
+}

@@ -1,0 +1,88 @@
+/*
+Theme Name: Porto Child
+Theme URI: http://www.portotheme.com/wordpress/porto
+Author: SW-THEMES
+Author URI: http://www.portotheme.com/
+Description: Porto Responsive Wordpress + eCommerce Theme.
+Version: 1.1
+Template: porto
+License: Commercial
+License URI: http://themeforest.net/licenses/regular_extended
+Tags: woocommerce, corporate, ecommerce, responsive, blue, black, green, white, light, dark, red, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready, accessibility-ready
+
+*/
+
+@import url("../porto/style.css");
+
+/*************** ADD YOUR CUSTOM CSS HERE  ***************/
+/* h3{color:#1c619c} */
+.fixed-header #header{position:relative}
+.add_to_cart_button:hover, 
+.add_to_cart_read_more:hover, 
+.add_to_cart_button:focus, 
+.add_to_cart_read_more:focus, 
+.add-links .add_to_cart_button:hover, 
+.add-links .add_to_cart_read_more:hover, 
+.add-links .add_to_cart_button:focus, 
+.add-links .add_to_cart_read_more:focus, 
+ul.products li.product:hover .add_to_cart_button, 
+ul.products li.product:hover .add_to_cart_read_more, 
+ul.list li.product .add_to_cart_button, 
+ul.list li.product .add_to_cart_read_more{ background-color:#1c619c}
+.ftr-social-icons{
+    float: right;
+    font-size: 10px;
+}
+.woocommerce-account .woocommerce-MyAccount-navigation ul li a{
+    border-bottom: 1px solid #1c619c2e;
+}
+html .featured-box-primary .box-content {
+    border-top-color: #0c8ac3;
+}
+.woocommerce-account .woocommerce-MyAccount-navigation ul li a:before {
+    border-left: 4px solid #0c8ac3;
+}
+html .btn-primary,
+.btn-primary, .button, input.submit, input[type="submit"].btn-primary, input[type="submit"].button, input[type="submit"].submit{
+    background-color: #2f82ca;
+    border-color: #2f82ca;
+}
+.woocommerce-tabs .resp-tabs-list li.resp-tab-active, .woocommerce-tabs .resp-tabs-list li:hover,.featured-box.porto-user-box{
+    border-color: #2f82ca !important;
+}
+.ftr-menu ul.menu,
+.ftr-menu .menu li{border:0}
+.ftr-menu .menu li{
+    float: left;
+    display: inline-block;
+    margin-right: 5px;
+}
+.footer-main aside.widget,
+.footer-main .ftr-menu,
+.footer-main .ftr-menu .widget_nav_menu, .footer-main .wpb_content_element{
+    margin-bottom: 0;
+}
+#footer a,#footer .widget p{color:#fff;}
+ul.nav-pills > li.active > a,ul.nav-pills > li > a:hover,ul.nav-pills > li.active > a:hover,ul.nav-pills > li > a:active,
+ul.nav-pills > li > a:focus{
+    background: #2f82ca;
+    color:#fff;
+}
+section.toggle label,section.toggle.active > label{border-color:#2f82ca;}
+section.toggle.active > label{background-color: #2f82ca;}
+#customer_login h2{color:#2f82ca}
+.vendor-info-wrapper .fab, .vendor-info-wrapper .fas,
+body.woocommerce-page.archive .sidebar-content .widget .widget-title {color:#2f82ca}
+#yith-become-a-vendor-submit {
+    background: #2f82ca;
+    color: #fff;
+    /* border-color: #2f82ca; */
+    border: 0;
+    cursor: pointer;
+}
+#yith-become-a-vendor-submit:hover{
+    background-color: #141b1e;
+    border-color: #0f1416;
+    box-shadow: 0 0 0 0.2rem rgba(41, 54, 60, .5);
+}
+

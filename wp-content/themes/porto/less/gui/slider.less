@@ -1,0 +1,94 @@
+
+// Carousel
+.owl-carousel .owl-dots .owl-dot.active span,
+.owl-carousel .owl-dots .owl-dot:hover span {
+    background-color: darken(@skinColor, 6%);
+}
+
+.owl-carousel.show-nav-title .owl-nav [class*="owl-"] {
+    /*color: @skinColor;*/
+	color: #21293c;
+}
+
+.owl-carousel .owl-nav [class*="owl-"] {
+    border-color: @skinColor @skinColor darken(@skinColor, 10%);
+    .buttonBackground(@skinColor, spin(@skinColor, 20%));
+}
+.product-thumbs-slider.owl-carousel {
+    .thumb-nav {
+        .thumb-next, .thumb-prev {
+            color: @skinColor;
+        }
+    }
+    .owl-item.selected .img-thumbnail,
+    .owl-item:hover .img-thumbnail {
+        border: 2px solid @skinColor;
+    }
+}
+
+.slick-slider {
+    .slick-dots {
+        li.slick-active,
+        li:hover {
+            i {
+                color: darken(@skinColor, 6%) !important;
+            }
+        }
+    }
+}
+
+.owl-carousel.dots-color-primary .owl-dots .owl-dot {
+    border-color: @color-primary;
+}
+.owl-carousel.dots-color-primary .owl-dots .owl-dot span {
+    background-color: #43a6a3;
+}
+
+// Master Slider
+.master-slider {
+    direction: ltr;
+
+    .ms-container {
+        .ms-nav-prev,
+        .ms-nav-next,
+        .ms-slide-vpbtn,
+        .ms-video-btn {
+            color: @skinColor;
+        }
+        .ms-bullet {
+            background: @skinColor;
+        }
+    }
+
+    .ms-slide .ms-slide-loading {
+
+        &:before {
+            border-color: @skinColor;
+        }
+    }
+}
+
+.yith-wcan-loading,
+.master-slider .ms-loading-container .ms-loading,
+.master-slider .ms-slide .ms-slide-loading,
+#fancybox-loading,
+.slick-slider .slick-loading .slick-list,
+.porto-carousel-wrapper > div:first-child > .porto-item-wrap:first-child,
+.loading-overlay .loader,
+.porto-ajax-loading {
+    &:before {
+        border-color: @skinColor;
+    }
+}
+
+// Revolution Slider
+.tparrows {
+    &.tparrows-carousel {
+        &.tp-leftarrow, &.tp-rightarrow {
+            .buttonBackground(@color-primary, spin(@color-primary, 20%), @color-primary-inverse);
+            &:before {
+                color: @color-primary-inverse;
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+
+.star-rating {
+    cursor: pointer;
+    float: none;
+    position: relative;
+    font-family: 'FontAwesome';
+    font-size: 11px;
+    height: 1em;
+    line-height: 1em;
+    overflow: hidden;
+    position: relative;
+    width: 5.1em;
+    letter-spacing: .1em;
+    text-align: $left;
+
+    &:before {
+        content: $fa-var-star$fa-var-star$fa-var-star$fa-var-star$fa-var-star;
+        float: $left;
+        #{$left}: 0;
+        position: absolute;
+        top: 0;
+    }
+
+    span {
+        float: $left;
+        #{$left}: 0;
+        overflow: hidden;
+        padding-top: 1.5em;
+        position: absolute;
+        top: 0;
+        &:before {
+            color: #6a6a6d;
+            content: $fa-var-star$fa-var-star$fa-var-star$fa-var-star$fa-var-star;
+            #{$left}: 0;
+            position: absolute;
+            top: 0;
+        }
+    }
+}

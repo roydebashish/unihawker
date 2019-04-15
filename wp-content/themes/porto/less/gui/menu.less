@@ -1,0 +1,180 @@
+
+// Menu
+
+.mega-menu {
+    > li.menu-item {
+        &.active,
+        &:hover {
+            > a {
+                background: @skinColor;
+            }
+        }
+
+        > a {
+            text-transform: @menu_text_transform;
+        }
+    }
+
+    .narrow {
+        ul.sub-menu {
+            background: @skinColor;
+        }
+
+        li.menu-item {
+            &:hover {
+                > a {
+                    background: lighten(@skinColor, 5%);
+                }
+            }
+        }
+    }
+    .wide {
+        .popup {
+            border-top-color: @skinColor;
+            color: @body_color;
+            > .inner {
+                > ul.sub-menu {
+                    > li.menu-item {
+                        li.menu-item {
+                            > a {
+                                color: @body_color;
+                            }
+                        }
+
+                        > a {
+                            text-transform: @menu_text_transform;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sidebar-menu {
+    > li.menu-item {
+        > a {
+            color: #465157;
+            .header-side &{
+                text-transform: @menu_text_transform;
+            }
+        }
+        &.active {
+            > a {
+                color: @skinColor;
+            }
+        }
+        > .arrow {
+            &:before {
+                color: #838b90;
+            }
+        }
+        &:hover {
+            background: @skinColor;
+
+            &,
+            + li.menu-item {
+                > a {
+                    border-top-color: @skinColor;
+                }
+            }
+            & > .arrow:before {
+                color: #fff;
+            }
+        }
+    }
+
+    .popup {
+        color: @body_color;
+    }
+
+    .wide {
+        .popup {
+            .sideMenuWidePopupBorder() when (@rtl = 1) {
+                border-right-color: @skinColor;
+
+                .right-sidebar & {
+                    border-left-color: @skinColor;
+                }
+            }
+            .sideMenuWidePopupBorder() when not (@rtl = 1) {
+                border-left-color: @skinColor;
+
+                .right-sidebar & {
+                    border-right-color: @skinColor;
+                }
+            }
+            .sideMenuWidePopupBorder;
+
+            > .inner {
+                > ul.sub-menu {
+                    > li.menu-item {
+                        li.menu-item {
+                            > a {
+                                color: @main_menu_popup_link_color;
+                            }
+                        }
+
+                        > a {
+                            text-transform: @menu_text_transform;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .narrow {
+        ul.sub-menu {
+            background: @main_menu_popup_bg_color;
+        }
+
+        li.menu-item {
+            > a {
+                color: @main_menu_popup_link_color;
+            }
+        }
+
+        li.menu-item:hover {
+            > a {
+                background: @main_menu_popup_link_hbg_color;
+            }
+        }
+    }
+
+    .menu-custom-block {
+        a {
+            color: #465157;
+            &:hover {
+                background-color: @skinColor;
+
+                &,
+                + a {
+                    border-top-color: @main_menu_popup_bg_color;
+                }
+            }
+        }
+    }
+}
+
+.mega-menu,
+.sidebar-menu,
+.accordion-menu,
+.menu-custom-block {
+    .tip {
+        background: @main_menu_tip_bg_color;
+        .tip-arrow {
+            color: @main_menu_tip_bg_color;
+        }
+    }
+}
+
+.porto-view-switcher {
+    .narrow {
+        li.menu-item {
+            > a {
+                text-transform: @menu_text_transform;
+            }
+        }
+    }
+}
