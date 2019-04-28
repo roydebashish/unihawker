@@ -40,6 +40,9 @@ define('DB_COLLATE', '');
 /**Disable auto core update **/
 define('WP_AUTO_UPDATE_CORE', false);
 
+/* Multisite */
+//define('WP_ALLOW_MULTISITE', true);
+
 /**#@+
  * Authentication Unique Keys and Salts.
  *

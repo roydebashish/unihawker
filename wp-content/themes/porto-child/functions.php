@@ -122,3 +122,35 @@ add_filter( 'woocommerce_cart_needs_payment', '__return_false' );
 // function hide_shipping_methods(){
 //     unset($available_shipping_methods[$shipping_method]);
 // }
+/***
+ * vendor registration data
+ * 
+ */
+add_action( 'admin_menu', 'extra_post_info_menu' );
+function extra_post_info_menu(){
+
+  $page_title = 'WordPress Extra Post Info';
+  $menu_title = 'Extra Post Info';
+  $capability = 'manage_options';
+  $menu_slug  = 'extra-post-info';
+  $function   = 'extra_post_info_page';
+  $icon_url   = 'dashicons-media-code';
+  $position   = 4;
+
+  add_menu_page( $page_title,
+                 $menu_title, 
+                 $capability, 
+                 $menu_slug, 
+                 $function, 
+                 $icon_url, 
+                 $position );
+}
+function extra_post_info_page(){
+    $mydb= new wpdb('root','','wp_vendor_unihawker','localhost');
+    $rows = $mydb->get_results("select * from wp_vendor_reg_data");
+    var_dump($rows);
+    // foreach ($rows as $obj) {
+    //     echo $obj->columnName;
+    // }
+
+}

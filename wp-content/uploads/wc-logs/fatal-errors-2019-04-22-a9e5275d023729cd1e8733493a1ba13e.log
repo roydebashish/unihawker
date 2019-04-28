@@ -1,0 +1,10 @@
+2019-04-22T15:27:44+00:00 CRITICAL Uncaught Error: Call to a member function set_reviews_allowed() on boolean in E:\InstalledSoft\xampp\htdocs\wp\unihawker\wp-content\plugins\woo-wallet\includes\class-woo-wallet-install.php:135
+Stack trace:
+#0 E:\InstalledSoft\xampp\htdocs\wp\unihawker\wp-content\plugins\woo-wallet\includes\class-woo-wallet-install.php(93): Woo_Wallet_Install::create_product()
+#1 E:\InstalledSoft\xampp\htdocs\wp\unihawker\wp-content\plugins\woo-wallet\includes\class-woo-wallet-install.php(36): Woo_Wallet_Install::cteate_product_if_not_exist()
+#2 E:\InstalledSoft\xampp\htdocs\wp\unihawker\wp-includes\class-wp-hook.php(286): Woo_Wallet_Install::install(false)
+#3 E:\InstalledSoft\xampp\htdocs\wp\unihawker\wp-includes\class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#4 E:\InstalledSoft\xampp\htdocs\wp\unihawker\wp-includes\plugin.php(453): WP_Hook->do_action(Array)
+#5 E:\InstalledSoft\xampp\htdocs\wp\unihawker\wp-admin\includes\plugin.php(586): do_action('activate_woo-wa...', false)
+#6 E:\InstalledSoft\xampp\htdocs\wp\uni in E:\InstalledSoft\xampp\htdocs\wp\unihawker\wp-content\plugins\woo-wallet\includes\class-woo-wallet-install.php on line 135
+
