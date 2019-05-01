@@ -129,11 +129,11 @@ add_filter( 'woocommerce_cart_needs_payment', '__return_false' );
 add_action( 'admin_menu', 'extra_post_info_menu' );
 function extra_post_info_menu(){
 
-  $page_title = 'WordPress Extra Post Info';
-  $menu_title = 'Extra Post Info';
+  $page_title = 'Vendor Registrations';
+  $menu_title = 'Vendor Request';
   $capability = 'manage_options';
   $menu_slug  = 'extra-post-info';
-  $function   = 'extra_post_info_page';
+  $function   = 'vendor_reg_data';
   $icon_url   = 'dashicons-media-code';
   $position   = 4;
 
@@ -145,10 +145,36 @@ function extra_post_info_menu(){
                  $icon_url, 
                  $position );
 }
-function extra_post_info_page(){
+function vendor_reg_data(){
     $mydb= new wpdb('root','','wp_vendor_unihawker','localhost');
     $rows = $mydb->get_results("select * from wp_vendor_reg_data");
-    var_dump($rows);
+    $reg_data = "";
+    if(!empty($rows)):
+        foreach($rows as $row):
+            $reg_data .= '<tr class="alternate">
+                <th class="check-column" scope="row">'.$row->owner_name.'</th>
+                <td class="column-columnname">'.$row->store_name.'</td>
+                <td class="column-columnname">'.$row->store_email.'</td>
+                <td class="column-columnname">'.$row->email.'</td>
+                <td class="column-columnname">'.$row->phone.'</td>
+            </tr>';
+        endforeach;
+    endif;
+    $table = '<table class="widefat fixed" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th class="">Owner Name</th> 
+                        <th class="">Store Name</th> 
+                        <th class="">Store Email</th> 
+                        <th class="">Email</th>
+                        <th class="">Phone</th> 
+                    </tr>
+                </thead>
+                <tbody>
+                   '.$reg_data.'
+                </tbody>
+            </table>';
+    echo $table;
     // foreach ($rows as $obj) {
     //     echo $obj->columnName;
     // }
