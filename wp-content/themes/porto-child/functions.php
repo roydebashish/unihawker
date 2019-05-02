@@ -147,16 +147,18 @@ function extra_post_info_menu(){
 }
 function vendor_reg_data(){
     $mydb= new wpdb('root','','wp_vendor_unihawker','localhost');
-    $rows = $mydb->get_results("select * from wp_vendor_reg_data");
+    $rows = $mydb->get_results("select * from wp_vendor_reg_data order by id desc");
     $reg_data = "";
     if(!empty($rows)):
         foreach($rows as $row):
+			$date=date_create($row->timestamp);
             $reg_data .= '<tr class="alternate">
                 <th class="check-column" scope="row">'.$row->owner_name.'</th>
                 <td class="column-columnname">'.$row->store_name.'</td>
                 <td class="column-columnname">'.$row->store_email.'</td>
                 <td class="column-columnname">'.$row->email.'</td>
                 <td class="column-columnname">'.$row->phone.'</td>
+                <td class="column-columnname">'.date_format($date,"Y/m/d H:i:s a").'</td>
             </tr>';
         endforeach;
     endif;
@@ -168,6 +170,7 @@ function vendor_reg_data(){
                         <th class="">Store Email</th> 
                         <th class="">Email</th>
                         <th class="">Phone</th> 
+                        <th class="">Date</th> 
                     </tr>
                 </thead>
                 <tbody>
@@ -175,8 +178,5 @@ function vendor_reg_data(){
                 </tbody>
             </table>';
     echo $table;
-    // foreach ($rows as $obj) {
-    //     echo $obj->columnName;
-    // }
 
 }
